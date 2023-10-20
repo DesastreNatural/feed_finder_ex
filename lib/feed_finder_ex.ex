@@ -1,18 +1,5 @@
 defmodule FeedFinderEx do
-  @moduledoc """
-  Documentation for `FeedFinderEx`.
-  """
+  use Rustler, otp_app: :feed_finder_ex
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> FeedFinderEx.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def find_feeds(_arg1,_arg2), do: :erlang.nif_error(:nif_not_loaded)
 end
